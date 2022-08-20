@@ -1,17 +1,48 @@
-html, body {
-    background: #ffeead;
-    color: #ff6f69;
+:root {
+    --red: #ff6f69;
+    --beige: #bbffad;
+    --yellow: #ffcc5c;
 }
 
+html, body {
+    background: var(--beige);
+    color: var(--red);
+}
+
+h1, p {
+    color: var(--red);
+}
+
+#navbar {
+    --nav-red: #df7272;
+}
 #navbar a {
-    color: #ff6f69;
+    color: var(--nav-red);
 }
 
 .item {
-    background: #ffcc5c;
+    /* --item-yellow: #ced124; */
+    /* --red:#7c365c; */
+    color: var(--red);
+    background: var(/* --item- */--yellow);
 }
 
 button {
-    background: #ff6f69;
-    color: #ffcc5c;
+    background: var(--red);
+    /* color: var(--item-yellow); */
+    color: var(--yellow);
+}
+
+.featured {
+    --yellow:#ffe55b;
+    --red: #ff5564;
+}
+
+@media all and (max-width:450px) {
+    .grid {
+        --columns: 300px;
+    }
+    :root {
+        --beige: #addceb;
+    }
 }

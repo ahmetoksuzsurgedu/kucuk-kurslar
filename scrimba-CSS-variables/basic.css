@@ -1,3 +1,6 @@
+:root {
+    --columns: 300px 300px;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -19,7 +22,7 @@ h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: var(--columns);
     grid-auto-rows: 140px;
     grid-gap: 20px;
     justify-content: center;
