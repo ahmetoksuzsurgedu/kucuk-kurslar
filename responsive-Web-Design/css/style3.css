@@ -1,0 +1,40 @@
+body {
+    font-size: 16px;
+}
+h1 {
+    font-size: 48px;
+    color: #2E7AD3;
+    margin: 45px 0;
+    /* padding: 45px; */
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    color: #104C90;
+}
+
+
+a:link {
+    color: #FF8000 ;
+    font-weight: bold;
+}
+a:hover, a:focus {
+    color: #2E7AD3;
+}
+
+.accent-color {
+    color: #FF8000;
+}
+
+main {
+    background: #F1F1F1;
+    width: 450px;
+    padding: 25px;
+    margin: 0 auto; /*bütün blogu sayfanin ortasina aliyor sag sol margin auto ile*/
+}
+
+img {
+    margin-bottom: 25px;
+}
