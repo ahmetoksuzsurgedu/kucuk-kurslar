@@ -1,0 +1,80 @@
+body {
+    /* background: #2E354F; */
+    font-size: 18px;
+    margin: 0;
+    font-family: lato;
+}
+
+h1, h2, 
+strong {
+    font-weight: 900;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #EF5839;
+}
+
+a {
+    color: #EF5839;
+}
+
+a:hover, a:focus {
+    color: #d4b44c;
+}
+
+/* Layout */
+
+header {
+    background: #2E354F;
+    padding: 45px 0;
+    color: #fff;
+}
+
+section {
+    padding: 45px 0;
+}
+
+.container {
+    width: 620px;
+    margin: 0 auto;
+    /* border: 2px solid magenta; */
+}
+
+.section-two {
+    background: #2E354F;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    /* margin-right: 25px; */
+}
+
+.btn-accent {
+    background: #EF5839;
+    color: #fff;
+}
+
+.btn-accent:hover, .btn-accent:focus {
+    background: #fff;
+    color: black;
+}
+
+.btn-white {
+    background: #fff;
+    color: #2E354F;
+}
+.btn-white:hover, .btn-white:focus {
+    background: #EF5839;
+    color: #fff;
+}
