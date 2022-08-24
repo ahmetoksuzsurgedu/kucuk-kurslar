@@ -1,6 +1,6 @@
 body {
     /* background: #2E354F; */
-    font-size: 18px;
+    font-size: 1rem;
     margin: 0;
     font-family: lato;
 }
@@ -17,12 +17,14 @@ strong {
 /* Typography */
 
 h1 {
-    font-size: 36px;
+    /* font-size: 36px; */
+    font-size: 3em;
     margin: 0;
 }
 
 h2 {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 2rem;
     color: #EF5839;
 }
 
@@ -32,6 +34,20 @@ a {
 
 a:hover, a:focus {
     color: #d4b44c;
+}
+/* to solve nested relativity problem use rem instead em*/
+.section-em {
+    /* font-size: 1.5em; */
+    font-size: 1.5rem;
+}
+
+ul {
+    /* font-size: 1.5em; */
+    font-size: 1.5rem;
+}
+li {
+    /* font-size: 1.5em; */
+    font-size: 1.5rem;
 }
 
 /* Layout */
@@ -47,6 +63,8 @@ section {
 }
 
 .container {
+    max-width: 620px; /* büyük ekranlarda düzgün gürünmesi icin */
+    min-width: 250px; /* ekran kücüldükce sacma sekilde kücülmemesi icin */
     /* width: 620px; responsive yapmak icin fix width yerine relative kullanalim*/
     width: 90%;
     margin: 0 auto;
