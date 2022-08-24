@@ -5,6 +5,10 @@ body {
     font-family: lato;
 }
 
+img {
+    width: 100%;
+}
+
 h1, h2, 
 strong {
     font-weight: 900;
@@ -44,7 +48,7 @@ section {
 
 .container {
     /* width: 620px; responsive yapmak icin fix width yerine relative kullanalim*/
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     border: 2px solid magenta;
 }
