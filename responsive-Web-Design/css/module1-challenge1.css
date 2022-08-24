@@ -43,9 +43,10 @@ section {
 }
 
 .container {
-    width: 620px;
+    /* width: 620px; responsive yapmak icin fix width yerine relative kullanalim*/
+    width: 50%;
     margin: 0 auto;
-    /* border: 2px solid magenta; */
+    border: 2px solid magenta;
 }
 
 .section-two {

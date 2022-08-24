@@ -63,3 +63,9 @@ header {
     background:#FFE600;
     color: white;
 }
+
+/*
+https://www.cssfontstack.com/
+5 Link states: Default, visited, Focus, Hover, Active
+pseudo-class:    a:link, a:visited, a:focus, a:hover, a:active  SIRA ÖNEMLI
+*/
