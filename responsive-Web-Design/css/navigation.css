@@ -17,8 +17,21 @@ h1 {
     color: #1792d2;
     margin: 0;
     font-size: .75rem;
+    text-transform: uppercase;
 }
 
+/* layout */
+.container {
+    width: 90%;
+    max-width: 900px;
+    /* border: 1px solid magenta; */
+    margin: 0 auto;
+}
+/* headerda logo ve navigation i yanyana yapmak icin */
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+}
 
 header {
     text-align: center;
@@ -26,16 +39,20 @@ header {
     padding: 2em 0;
 }
 
+/* navigation */
+
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     justify-content: center;
+    text-transform: uppercase;
+    /* border: 1px solid blue; */
 }
 
 nav li {
-
-    margin: 0 1em;
+    /*margin: 0 1em; /* in horizontal design make it small problem*/
+    margin-left: 2em;
 }
 
 nav a {
@@ -57,3 +74,15 @@ nav a:focus {
     color: #707070;
 }
 
+@media (max-width:675px) {
+    .container-nav {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: .5em 0;
+    }
+
+}
