@@ -2,8 +2,34 @@ body {
     font-size: 1.125rem;
     color: #707070;
     margin: 0;
+    /* background: pink; */
 }
 
+/*  Media queries samples
+            @media (min-width:400px) {
+                body {
+                    background: purple;
+                }
+            }
+
+            @media (min-width:500px) {
+                body {
+                    background: orange;
+                }
+            }
+
+            @media (min-width:500px) and (orientation:landscape) {
+                body {
+                    background: red;
+                }
+            }
+
+            @media (min-width: 400px) and (max-width: 649px) {
+                body {
+                    background: purple;
+                }
+            }
+*/
 
 h1 {
     font-size: 3rem;
@@ -63,5 +89,16 @@ img {
     background: #312614;
     color: #fff;
     padding: 1rem;
+}
 
+
+@media (max-width:600px) {
+    .columns {
+        flex-direction: column;
+    }
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 100%;
+    }
 }
