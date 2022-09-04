@@ -1,0 +1,41 @@
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.cart {
+    margin-right: 25px;
+    float: right;
+    border: 1px solid #d8d8d8;
+    padding: 5px 20px;
+}
+
+button {
+    margin-top: 30px;
+    border: none;
+    background-color: #1e95ea;
+    color: white;
+    height: 40px;
+    width: 100px;
+}
+
+.disabledButton {
+    background: #d8d8d8;
+}
+
+img {
+    height: 400px;
+}
+
+.product {
+    display: flex;
+}
+
+.product > * {
+    padding: 3em;
+}
+/* .variant { outline: solid 2px blue;} */
+.hidden {
+    display: none;
+}
