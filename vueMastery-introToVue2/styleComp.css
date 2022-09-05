@@ -39,9 +39,3 @@ img {
 .hidden {
     display: none;
 }
-
-input {
-    width: 300px;
-    height: 40px;
-    align-self:center;
-}
