@@ -44,8 +44,22 @@ Vue.component('product', {
                 :class="{ disabledButton: !inStock }" >Add to Cart</button>
         <!-- other methods like @click, @mouseover we can use: <form @submit="addToCart">...</form>,
             <input @keyup.enter="send"> etc...   -->
-        <button @click="substructFromCart" :disabled="cart < 1" :class="{ hidden:cart < 1 }">Substruct from Cart</button>
-    </div>
+        <button @click="substructFromCart">Substruct from Cart</button>
+            <!-- burasi buttondan cikarildi:  :disabled="cart < 1" :class="{ hidden:cart < 1 }" -->
+        </div>
+        <div>
+            <h2>Reviews</h2>
+            <p v-if="!reviews.length">There are no reviews yet.</p>
+            <ul>
+                <li v-for="review in reviews">
+                    <p>{{ review.name }}</p>
+                    <p>Rating: {{ review.rating }}</p>
+                    <p>{{ review.review }}</p>
+                    <p>I recommend this product: {{ review.recommendation }}</p>
+                </li>  
+            </ul>
+        </div>
+    <product-review @review-submitted="addReview"></product-review>
 </div>
     `,
     
@@ -84,6 +98,7 @@ Vue.component('product', {
             ],
             sizes: ["L","M","S"],
             visible:"hidden",
+            reviews: []
         }
     },
 
@@ -104,6 +119,9 @@ Vue.component('product', {
         substructFromCart () {
             this.$emit('substruct-from-cart',this.variants[this.selectedVariant].variantId)
         },
+        addReview (productReview) {
+            this.reviews.push(productReview)
+        }
     },
     computed: {
         title() {
@@ -126,6 +144,83 @@ Vue.component('product', {
         },
     }
 
+})
+
+Vue.component('product-review', {
+    template:`
+        <form class="review-form" @submit.prevent="onSubmit">
+
+        <p v-if="errors.length">
+            <b>Please correct the following error(s):</b> 
+            <ul>
+                <li v-for="error in errors">{{ error }}</li>
+            </ul>       
+        </p>
+
+            <p>
+                <label for="name">Name:</label>
+                <input id="name" v-model="name" placeholder="name">
+            </p>
+            <p>
+                <label for="review">Review:</label>
+                <textarea id="review" v-model="review" ></textarea> <!-- required ekleyerek validate edebiliriz yada custom validate yapabiliriz -->
+            </p>
+            <p>
+                <label for="rating">Rating:</label>
+                <select id="rating" v-model.number="rating">
+                    <option>5</option>
+                    <option>4</option>
+                    <option>3</option>
+                    <option>2</option>
+                    <option>1</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Would you recommend this product?</legend>
+                <label for="recommendation1">Yes</label>
+                <input type="radio" id="recommendation1" v-model="recommendation" name="recommendation" value="yes" checked>
+                <label for="recommendation2">No</label>
+                <input type="radio" id="recommendation2" v-model="recommendation" name="recommendation" value="no">
+            </fieldset>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    `,
+    data() {
+        return {
+            name: null,
+            review: null,
+            rating: null,
+            recommendation: null,
+            errors: [],
+        }
+    },
+    methods: {
+        onSubmit () {
+            if (this.name && this.review && this.rating) {
+                let productReview = {
+                    name: this.name,
+                    review: this.review,
+                    rating: this.rating,
+                    recommendation: this.recommendation,
+                }
+                this.$emit('review-submitted',productReview)
+                this.name=null
+                this.review=null
+                this.rating=null
+                this.recommendation=null
+            }
+            else {
+                if (!this.name) this.errors.push("Name required.")
+                if (!this.review) this.errors.push("Review required.")
+                if (!this.rating) this.errors.push("Rating required.")
+                if (!this.recommendation) this.errors.push("Recommendation required.")
+            }
+        }
+    }
 })
 
 
