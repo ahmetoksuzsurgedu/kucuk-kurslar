@@ -1,0 +1,30 @@
+1. vscode download and setup
+2. hello-world.js console.log sample and in terminal window:node hello-world.js 
+3. npm init vue@3 .  instals vue3 with some options
+4. ctrl +shft+P opens commandPalet  
+5. npm install instals all dependencies. imported edilen degistirilince used name de degisiyor. click developer:reload window command in commandPalet
+6. preferences:open settings (UI) search "format" and click "Format on Save"
+7. sarch "default formatter" in UI settings and select "prettier" as default formatter
+8. in terminal write "npx prettier --check ." for check all the files
+9. in terminal write "npx prettier --write ." for arrange all the files
+10. in ".prettierrc.json" file add ""singleQuote": true" to change doublequote to singleQuote. (bunu begenmedim)
+11. add to the package.json in scripts part in two lines:"format": "prettier --write .","format:check": "prettier --check ." so run in terminal format and format:check
+12. setup "ES lint" to make automatic search in UI settings "code actions" then in setings.json add ""editor.codeActionsOnSave": {}" with parameter ""source.fixAll.eslint": true" but i did not like it for now.
+13. add "Vue 3 snippets by hollowtree" and "Vue vscode snippets by sarah.drasner" extention
+14. add "snippet generator by Wenfang Du" extantion to produce your own snippets easily.
+15. in UI settings search for margin and enable "Editor:Glyph margin" and command palette write debug and open javascript Debug terminal
+16. in JS debug terminal "node debug-test.js" and in vs code debug data appear.
+17. in terminal run "npm run dev" command and debug data is in Browser App.
+18. "advanced new file" extention create files anywehere in workspace from the keyboard.
+19. "div>span*5.the-span-$" in a div puts 5 spans with a numbered classname for each.
+20. "div>span*5{meraba-$}" in a div puts 5 spans with a numbered content for each.
+21. in UI settings search for linked Editing and enable it to change the tags easily.
+22. Emmet in html and css very usaful. m10px => margin: 10px ...
+23. extension "incrementor by Neil Smith"
+24. "Tailwind CSS Intellisense by Tailwind Labs" is an CSS tooling extension for VScode.
+25. Install "Open in NPM by Fabio Spampinato" extension and open a pinia file.
+26. Install "Import Cost by Wix" extension and see the size of a pinia file.
+27. Install "Npm Browser by Dennis Van Hest" extension and search npm packages from VScode.
+28. Install "Markdown All in one by Yu Zhang" extension and write Markdown from VScode.
+29. Install "Gitlens-Gitsupercharged by Gitkraken" extension and gitle from VScode.
+30. settings.json keybindings.json good idea for sharing settings.
